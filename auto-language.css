@@ -1,10 +1,3 @@
-var tracks = player.textTracks();
-
-for (var i = 0; i < tracks.length; i++) {
-  var track = tracks[i];
-
-  // 
-  if (track.kind === 'captions') {
-    track.mode = 'hidden';
-  }
-}
+v.textTracks[0].mode = "hidden";  // "showing" will make them reappear
+    // if you want to show the controls
+v.controls = true;
