@@ -1,15 +1,10 @@
-videojs.registerPlugin('autoLanguage', function() {
-      var myPlayer = this;
-      myPlayer.on("loadedmetadata", function () {
+var tracks = player.textTracks();
 
-        // +++ Get the captions +++
-        var track_language;
-        var tracks = myPlayer.textTracks();
+for (var i = 0; i < tracks.length; i++) {
+  var track = tracks[i];
 
-        // +++ Loop through captions +++
-            track_language = tracks[i].language.substr(0, 0);
-            tracks[i].mode = "disabled";
-        }
-    });
-
-});
+  // Find the English captions track and mark it as "showing".
+  if (track.kind === 'captions' && track.language === 'en') {
+    track.mode = 'hidden';
+  }
+}
