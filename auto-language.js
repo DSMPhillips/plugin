@@ -5,6 +5,6 @@ for (var i = 0; i < tracks.length; i++) {
 
   // 
   if (track.kind === 'captions') {
-    track.mode = 'disabled';
+    track.mode = 'hidden';
   }
 }
