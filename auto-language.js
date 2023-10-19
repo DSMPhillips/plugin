@@ -19,7 +19,7 @@ videojs.registerPlugin('autoLanguage', function() {
             // When the caption language equals the browser language, then set it as default
             if (track_language) {
                 if (track_language === browser_language) {
-                    tracks[i].mode = "showing";
+                    tracks[i].mode = "disabled";
                 } else {
                     tracks[i].mode = "disabled";
                 }
