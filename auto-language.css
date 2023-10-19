@@ -1,7 +1,5 @@
-<script type="text/javascript">
-    $(document).ready(function() {
-    var video = document.querySelector('#video'); // get the video element
-    var tracks = video.textTracks; // one for each track element
-    var track = tracks[0]; // corresponds to the first track element
-    track.mode = 'hidden';
-});
+var video = document.querySelector('#player');
+
+for (var i = 0; i < video.textTracks.length; i++) {
+   video.textTracks[i].mode = 'hidden';
+}
