@@ -1,5 +1,4 @@
-var video = document.querySelector('#player');
-
-for (var i = 0; i < video.textTracks.length; i++) {
-   video.textTracks[i].mode = 'hidden';
-}
+videojs("vdoPlayer", {}, function(){
+  // Player (this) is initialized and ready.
+  $("li.vjs-texttrack-settings").eq(2).trigger('click');
+});
