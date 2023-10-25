@@ -13,7 +13,7 @@ function group() {
     button.innerHTML = icon;
     button.style.fontSize = '1.8em';
     return button;
-};
-};
+}
+}
 
 videojs.registerPlugin('group', group);
